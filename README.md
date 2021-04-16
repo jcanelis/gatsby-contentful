@@ -1,19 +1,17 @@
-## 🚀 Quick start
+## 🦦 Gatsby + Contentful
 
-1.  **Create a Gatsby site.**
+1.  **Install dependencies.**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+    After cloning, install the needed stuff in the repo.
 
     ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
+    yarn
     ```
 
 2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into site’s directory and start it up.
 
     ```shell
-    cd my-gatsby-site/
     npm run develop
     ```

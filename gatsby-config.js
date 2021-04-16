@@ -5,10 +5,21 @@ if (process.env.NODE_ENV !== "production") {
 
 module.exports = {
   siteMetadata: {
-    title: "meryl",
+    title: "Gatsby + Contentful",
     siteUrl: "https://johncanelis.com",
   },
+
   plugins: [
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-gatsby-cloud",
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-styled-components",
+
     {
       resolve: "gatsby-source-contentful",
       options: {
@@ -16,41 +27,24 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: ["G-CJNKJBHN0C"],
-        // This object gets passed directly to the gtag config command
-        // This config will be shared across all trackingIds
         gtagConfig: {
           optimize_id: "OPT_CONTAINER_ID",
           anonymize_ip: true,
           cookie_expires: 0,
         },
-        // This object is used for configuration specific to this plugin
         pluginConfig: {
-          // Puts tracking script in the head instead of the body
           head: false,
-          // Setting this parameter is also optional
           respectDNT: true,
-          // Avoids sending pageview hits from custom paths
           exclude: ["/preview/**", "/do-not-track/me/too/"],
         },
       },
     },
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-gatsby-cloud",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
-    },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -58,6 +52,13 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/icon.png",
+      },
     },
   ],
 };
