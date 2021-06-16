@@ -17,6 +17,25 @@ const IndexPage = () => {
   const products = getProducts();
   return (
     <>
+      <Helmet
+        title={"Gatsby + Contentful"}
+        meta={[
+          {
+            name: "charset",
+            content: "UTF-8",
+          },
+          {
+            name: "robots",
+            content: "index, follow",
+          },
+          {
+            name: "description",
+            content: "Gatsby site with Contentful content.",
+          },
+        ]}
+      >
+        <html lang="en" />
+      </Helmet>
       <GlobalStyle />
       <Helmet title={"Gatsby + Contentful"} />
       <Layout>

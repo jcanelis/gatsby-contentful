@@ -57,8 +57,18 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: "Gatsby Contenful",
+        short_name: "Gatsby Contenful",
+        start_url: "/",
+        background_color: "#000000",
+        theme_color: "#000000",
+        display: "minimal-ui",
         icon: "src/images/icon.png",
+        icon_options: {
+          purpose: "any maskable",
+        },
       },
     },
+    "gatsby-plugin-offline",
   ],
 };
