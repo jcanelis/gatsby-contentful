@@ -7,6 +7,7 @@ const Paragraph = styled.p`
   line-height: 150%;
   font-weight: 400;
   width: 100%;
+  color: rgba(100, 100, 100, 1);
 
   @media (prefers-color-scheme: dark) {
     color: rgba(245, 245, 245, 0.9);

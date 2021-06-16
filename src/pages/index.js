@@ -20,7 +20,7 @@ const IndexPage = () => {
       <GlobalStyle />
       <Helmet title={"Gatsby + Contentful"} />
       <Layout>
-        <ul>
+        <ul style={{ flexWrap: "wrap" }}>
           {products.map(({ node }) => {
             const image = getImage(node.photos[0]);
             return (

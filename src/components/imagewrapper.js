@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 const ImageWrapper = styled.div`
   grid-row: 3;
+  grid-column: 1 / 9;
+  flex: 1;
   margin: 0 0 ${4 * 16}px;
   padding: 0;
   width: ${4 * 80}px;
