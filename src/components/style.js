@@ -5,6 +5,8 @@ const GlobalStyle = createGlobalStyle`
     font-display: swap;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: normal;
+    margin: 0;
+    padding: 0;
   }
 
   html {
@@ -20,29 +22,39 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ul {
-    margin: 0;
-    grid-row: 1;
-    grid-column: 1 / 9;
     display: flex;
+    flex-direction: row;
+    flex: 1;
     list-style: none;
+    overflow: auto;
 
-    @media(max-width: 800px) {
+    @media(max-width: 600px) {
       flex-direction: column;
-      padding: 24px;
     }
   }
 
   li {
     flex: 1;
-    margin: 0;
-    padding: 24px;
-    margin-top: 48px;
+    margin-right: 64px;
 
+    @media(max-width: 600px) {
+      padding: 24px;
+      margin-right: 0;
+    }
+  }
+
+
+  rect.bar {
+    &:hover {
+      fill: red;
+    }
+
+    @media(prefers-color-scheme: dark) {
+      fill: rgba(255, 255, 255, 0.7);
+    }
   }
 
   body {
-    margin: 0;
-    padding: 0;
     background-color: rgba(255, 255, 255, 1);
 
     @media(prefers-color-scheme: dark) {

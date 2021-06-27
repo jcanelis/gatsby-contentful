@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
 const ImageWrapper = styled.div`
-  grid-row: 3;
-  grid-column: 1 / 9;
-  flex: 1;
   margin: 0 0 ${4 * 16}px;
-  padding: 0;
   width: ${4 * 80}px;
   height: ${4 * 80}px;
   display: flex;
@@ -20,6 +16,16 @@ const ImageWrapper = styled.div`
   &:hover {
     opacity: 1;
     transform: scale(1.05);
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    height: ${4 * 120}px;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   @media (prefers-color-scheme: dark) {
