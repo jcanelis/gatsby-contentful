@@ -19,6 +19,7 @@ const Map = ({ data }) => {
         .data(topojson.feature(us, us.objects.states).features)
         .join("path")
         .attr("fill", "rgba(0,0,0,0.1)")
+        .attr("class", "state")
         .attr("d", path)
         .append("title")
         .text("cool");
@@ -35,11 +36,11 @@ const Map = ({ data }) => {
   );
 
   return (
-    <svg ref={ref} viewBox="0 0 960 700" preserveAspectRatio="xMidYMid meet">
-      <g className="plot-area" />
-      <g className="x-axis" />
-      <g className="y-axis" />
-    </svg>
+    <svg
+      ref={ref}
+      viewBox="0 0 960 700"
+      preserveAspectRatio="xMidYMid meet"
+    ></svg>
   );
 };
 

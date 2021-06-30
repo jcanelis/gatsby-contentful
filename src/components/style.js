@@ -43,6 +43,11 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  path.state {
+    &:hover {
+      fill: red;
+    }
+  }
 
   rect.bar {
     &:hover {
