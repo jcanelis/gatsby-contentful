@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: row;
     flex: 1;
     list-style: none;
-    overflow: auto;
+    flex-wrap: wrap;
 
     @media(max-width: 600px) {
       flex-direction: column;
@@ -34,13 +34,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   li {
-    flex: 1;
-    margin-right: 64px;
-
-    @media(max-width: 600px) {
-      padding: 24px;
-      margin-right: 0;
-    }
+    flex: 1 300px;
   }
 
   path.state {

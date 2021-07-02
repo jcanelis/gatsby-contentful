@@ -41,6 +41,10 @@ const IndexPage = () => {
       <GlobalStyle />
       <Helmet title={"Gatsby + Contentful"} />
       <Layout>
+        <div style={{ gridRow: "1", gridColumn: "1/9" }}>
+          <Map data={mapData} />
+        </div>
+
         <div style={{ gridRow: "2", gridColumn: "1/9" }}>
           <ul>
             {products.map(({ node }) => {
@@ -60,9 +64,6 @@ const IndexPage = () => {
               );
             })}
           </ul>
-        </div>
-        <div style={{ gridRow: "1", gridColumn: "1/9" }}>
-          <Map data={mapData} />
         </div>
       </Layout>
     </>
