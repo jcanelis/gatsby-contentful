@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 export const getProducts = () => {
   const data = useStaticQuery(
     graphql`
-      query getContentfulData {
+      query getContentfulDatass {
         allContentfulProduct {
           edges {
             node {
@@ -17,6 +17,14 @@ export const getProducts = () => {
               }
               description {
                 description
+              }
+              mainPhoto {
+                gatsbyImageData(
+                  formats: JPG
+                  quality: 10
+                  placeholder: DOMINANT_COLOR
+                )
+                contentful_id
               }
             }
           }
