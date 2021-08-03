@@ -1,28 +1,34 @@
 import * as React from "react";
 import * as d3 from "d3";
+import legend from "d3-color-legend";
 import * as topojson from "topojson-client";
 import { useD3 } from "../hooks/useD3";
 import { us } from "./usa";
-// import { geoEqualEarth, geoPath } from "d3-geo";
+import { unemployment } from "./unemployment";
 
 const Map = ({ data }) => {
+  const color = d3.scaleQuantize([1, 7], d3.schemeReds[6]);
+  const format = (d) => `${d}%`;
+
   const path = d3.geoPath();
   const ref = useD3(
     (svg) => {
       const height = 500;
       const width = 1000;
-      const margin = { top: 20, right: 30, bottom: 30, left: 40 };
 
       svg
         .append("g")
         .selectAll("path")
         .data(topojson.feature(us, us.objects.states).features)
         .join("path")
-        .attr("fill", "rgba(0,0,0,0.1)")
         .attr("class", "state")
+        .attr("fill", (d) => color(unemployment.get(d.properties.name)))
         .attr("d", path)
         .append("title")
-        .text("cool");
+        .text(
+          (d) => `${d.properties.name}
+${format(unemployment.get(d.properties.name))}`
+        );
 
       svg
         .append("path")

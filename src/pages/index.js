@@ -41,7 +41,8 @@ const IndexPage = () => {
       <GlobalStyle />
       <Helmet title={"Gatsby + Contentful"} />
       <Layout>
-        <div style={{ gridRow: "1", gridColumn: "1/9" }}>
+        <div style={{ gridRow: "1", gridColumn: "1/9", textAlign: "center" }}>
+          <Subheader>Market Data</Subheader>
           <Map data={mapData} />
         </div>
 
