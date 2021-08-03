@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as d3 from "d3";
-import legend from "d3-color-legend";
 import * as topojson from "topojson-client";
 import { useD3 } from "../hooks/useD3";
 import { us } from "./usa";
