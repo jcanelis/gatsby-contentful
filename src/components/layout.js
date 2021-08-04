@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Layout = styled.main`
   margin: 48px auto;
-  padding: 0 0 180px;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(12, auto);

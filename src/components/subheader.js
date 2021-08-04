@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const Subheader = styled.h4`
-  font-size: 54px;
+  font-size: 56px;
+  font-family: "Leitura Display Roman";
   line-height: 300%;
-  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
 
   @media (prefers-color-scheme: dark) {
     color: rgba(245, 245, 245, 0.9);
