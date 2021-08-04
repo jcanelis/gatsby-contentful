@@ -132,9 +132,9 @@ const OtherPage = () => {
           </div>
         </div>
 
-        <div style={{ gridRow: "2", gridColumn: "1/9", textAlign: "center" }}>
+        <div style={{ gridRow: "2", gridColumn: "1/9" }}>
           <Subheader>Heading</Subheader>
-          <p style={{ textAlign: "left", padding: 24, marginBottom: 24 }}>
+          <p style={{ marginBottom: 48 }}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -144,6 +144,17 @@ const OtherPage = () => {
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <Table />
+        </div>
+
+        <div style={{ gridRow: "4", gridColumn: "1/9" }}>
+          <iframe
+            src="https://open.spotify.com/embed/track/4IO4BwhnPKBEyyfz7FzSXG?theme=0"
+            width="100%"
+            height="340"
+            frameBorder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
         </div>
       </Layout>
     </>

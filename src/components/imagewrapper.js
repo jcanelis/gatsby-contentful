@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const ImageWrapper = styled.div`
-  margin: 0 0 ${4 * 16}px;
+  margin: 0;
+  padding: 0;
   flex: 1;
   display: flex;
   transform: scale(1);

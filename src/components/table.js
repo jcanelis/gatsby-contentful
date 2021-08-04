@@ -11,9 +11,7 @@ const TableWrapper = styled.table`
   font-family: "Leitura Roman";
   font-size: 20px;
   line-height: ${4 * 8}px;
-  border-collapse: collapse; /* what this?*/
-  width: 100%;
-  overflow-x: auto;
+  border-collapse: collapse;
 `;
 
 const Header = styled.th`
@@ -58,37 +56,42 @@ const Table = () => {
   const products = getProducts();
 
   return (
-    <TableWrapper>
-      <thead>
-        <Row>
-          <Header>Photo</Header>
-          <Header>Job</Header>
-          <Header>Age</Header>
-          <Header>Location</Header>
-        </Row>
-      </thead>
+    <div style={{ border: "1px solid #000", width: "100%", overflowX: "auto" }}>
+      <TableWrapper>
+        <thead>
+          <Row>
+            <Header>Photo</Header>
+            <Header>Title</Header>
+            <Header>Price</Header>
+            <Header>Description</Header>
+          </Row>
+        </thead>
 
-      <tbody>
-        {products.map(({ node }) => {
-          const image = getImage(node.photos[0]);
-          return (
-            <Row key={node.id}>
-              <Data style={{ display: "flex" }}>
-                <ImageWrapper>
-                  <GatsbyImage
-                    image={image}
-                    alt={node.description.description}
-                  />
-                </ImageWrapper>
-              </Data>
-              <Data>{node.title}</Data>
-              <Data>{node.price}</Data>
-              <Data>{node.description.description}</Data>
-            </Row>
-          );
-        })}
-      </tbody>
-    </TableWrapper>
+        <tbody>
+          {products.map(({ node }) => {
+            const image = getImage(node.photos[0]);
+            return (
+              <Row key={node.id}>
+                <Data style={{ display: "flex" }}>
+                  <ImageWrapper>
+                    <GatsbyImage
+                      image={image}
+                      style={{ width: 88 }}
+                      alt={node.description.description}
+                    />
+                  </ImageWrapper>
+                </Data>
+                <Data>{node.title}</Data>
+                <Data>{node.price}</Data>
+                <Data>
+                  <span className="butts">{node.description.description}</span>
+                </Data>
+              </Row>
+            );
+          })}
+        </tbody>
+      </TableWrapper>
+    </div>
   );
 };
 

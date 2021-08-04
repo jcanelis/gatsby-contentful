@@ -313,8 +313,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   path.state {
-    &:hover {
-      fill: red;
+    &::after {
+      content: attr(data-stuff);
     }
   }
 
@@ -326,6 +326,15 @@ const GlobalStyle = createGlobalStyle`
     @media(prefers-color-scheme: dark) {
       fill: rgba(255, 255, 255, 0.7);
     }
+  }
+
+  span {
+   overflow: hidden;
+   font-family: inherit;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
   }
 
   body {
