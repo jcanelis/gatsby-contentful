@@ -3,12 +3,16 @@ import * as d3 from "d3";
 import * as topojson from "topojson-client";
 import { useD3 } from "../hooks/useD3";
 import legend from "./legend";
-
 import { county } from "./county";
 import { states } from "./states";
 import us from "./us.json";
+import Papa from "papaparse";
 
 const Map = () => {
+  React.useEffect(() => {
+    console.log("hi");
+  }, []);
+
   const color = d3.scaleQuantize([1, 10], d3.schemeReds[9]);
   const format = (d) => `${d}%`;
 
@@ -16,9 +20,15 @@ const Map = () => {
   const ref = useD3((svg) => {
     svg
       .append("g")
-      .attr("transform", "translate(610,20)")
+      .attr("transform", "translate(560,20)")
+      .attr("class", "legend")
       .append(() =>
-        legend({ color, title: "Unemployment rate (%)", width: 260 })
+        legend({
+          color,
+          title: "Unemployment rate (%)",
+          width: 320,
+          ticks: 10,
+        })
       );
 
     svg
@@ -28,6 +38,9 @@ const Map = () => {
       .join("path")
       .attr("fill", (d) => color(county.get(d.id)))
       .attr("d", path)
+      .attr("stroke", "white")
+      .attr("stroke-width", "0.2px")
+      .attr("stroke-linejoin", "round")
       .attr("class", "state")
       .attr(
         "data-stuff",

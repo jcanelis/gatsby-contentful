@@ -89,200 +89,200 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-  font-family: "ITC Avant Garde Gothic Bold";
-  src: url(${AvantGardeBold2}) format("woff2"), url(${AvantGardeBold}) format("woff");
-  font-display: swap;
-  font-weight: normal;
-  font-style: normal;
-}
+    font-family: "ITC Avant Garde Gothic Bold";
+    src: url(${AvantGardeBold2}) format("woff2"), url(${AvantGardeBold}) format("woff");
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+  }
 
-@font-face {
+  @font-face {
   font-family: "ITC Avant Garde Gothic Medium";
   src: url(${AvantGardeMedium2}) format("woff2"), url(${AvantGardeMedium}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-// Display
-@font-face {
+  // Display
+  @font-face {
   font-family: "Leitura Display Roman";
   src: url(${LeituraDisplayRoman2}) format("woff2"), url(${LeituraDisplayRoman}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Display Italic";
   src: url(${LeituraDisplayItalic2}) format("woff2"), url(${LeituraDisplayItalic}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Display Swashes";
   src: url(${LeituraDisplaySwashes2}) format("woff2"), url(${LeituraDisplaySwashes}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-// News
-@font-face {
+  // News
+  @font-face {
   font-family: "Leitura Roman";
   src: url(${LeituraRoman2}) format("woff2"), url(${LeituraRoman}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Roman Italic";
   src: url(${LeituraRomanItalic2}) format("woff2"), url(${LeituraRomanItalic}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Medium";
   src: url(${LeituraMedium2}) format("woff2"), url(${LeituraMedium}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Medium Italic";
   src: url(${LeituraMediumItalic2}) format("woff2"), url(${LeituraMediumItalic}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Bold";
   src: url(${LeituraBold2}) format("woff2"), url(${LeituraBold}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Bold Italic";
   src: url(${LeituraBoldItalic2}) format("woff2"), url(${LeituraBoldItalic}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Black";
   src: url(${LeituraBlack2}) format("woff2"), url(${LeituraBlack}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Black Italic";
   src: url(${LeituraBlackItalic2}) format("woff2"), url(${LeituraBlackItalic}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-// Sans
+  // Sans
 
-@font-face {
+  @font-face {
   font-family: "Leitura Sans Light";
   src: url(${LeituraSansLight2}) format("woff2"), url(${LeituraSansLight}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Sans Light Italic";
   src: url(${LeituraSansLightItalic2}) format("woff2"), url(${LeituraSansLightItalic}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Sans Medium";
   src: url(${LeituraSansMedium2}) format("woff2"), url(${LeituraSansMedium}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Sans Medium Italic";
   src: url(${LeituraSansMediumItalic2}) format"woff"), url(${LeituraSansMediumItalic}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Sans Bold";
   src: url(${LeituraSansBold2}) format("woff2"), url(${LeituraSansBold}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Sans Bold Italic";
   src: url(${LeituraSansBoldItalic2}) format("woff2"), url(${LeituraSansBoldItalic}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Sans Black";
   src: url(${LeituraSansBlack2}) format("woff2"), url(${LeituraSansBlack}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Leitura Sans Black Italic";
   src: url(${LeituraSansBlackItalic2}) format("woff2"), url(${LeituraSansBlackItalic}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Fira Mono Regular";
   src: url(${FiraMonoRegular2}) format("woff2"), url(${FiraMonoRegular}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Fira Mono Medium";
   src: url(${FiraMonoMedium2}) format("woff2"), url(${FiraMonoMedium}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
+  @font-face {
   font-family: "Fira Mono Bold";
   src: url(${FiraMonoBold2}) format("woff2"), url(${FiraMonoBold}) format("woff");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+  }
 
   html {
     font-display: auto;
@@ -313,6 +313,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   path.state {
+    &:hover {
+      stroke: #fff;
+      stroke-width: 2px;
+    }
+
     &::after {
       content: attr(data-stuff);
     }
@@ -326,6 +331,12 @@ const GlobalStyle = createGlobalStyle`
     @media(prefers-color-scheme: dark) {
       fill: rgba(255, 255, 255, 0.7);
     }
+  }
+
+  g.legend svg g text.title {
+    font-family: "Fira Mono Medium";
+    font-size: 11px;
+    margin-bottom: 8px;
   }
 
   span {

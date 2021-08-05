@@ -45,10 +45,10 @@ const IndexPage = () => {
       <Layout>
         <div style={{ gridRow: "1", gridColumn: "1/9", textAlign: "center" }}>
           <Subheader>Market Data</Subheader>
-          <Link to={"/other"}>
-            <p>View more</p>
-          </Link>
           <Map />
+          <Link to={"/other"}>
+            <p>More</p>
+          </Link>
         </div>
 
         <div style={{ gridRow: "2", gridColumn: "1/9", textAlign: "center" }}>

@@ -145,17 +145,6 @@ const OtherPage = () => {
           </p>
           <Table />
         </div>
-
-        <div style={{ gridRow: "4", gridColumn: "1/9" }}>
-          <iframe
-            src="https://open.spotify.com/embed/track/4IO4BwhnPKBEyyfz7FzSXG?theme=0"
-            width="100%"
-            height="340"
-            frameBorder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-          ></iframe>
-        </div>
       </Layout>
     </>
   );
