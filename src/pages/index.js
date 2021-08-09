@@ -26,7 +26,9 @@ const IndexPage = () => {
       Papa.parse(
         "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdPUrQvsjESDBMBKhCOcY-TWtOq7rECmkuf01omBmQpkcBPF8ge_d6pcQ-ybGskS-K68xrJ3MCjqSH/pub?gid=0&single=true&output=csv",
         {
+          header: true,
           download: true,
+          dynamicTyping: true,
           complete: function (results) {
             console.log(results.data);
           },
