@@ -8,6 +8,9 @@ import { states } from "./states";
 import us from "./us.json";
 
 const Map = () => {
+  React.useEffect(() => {
+    console.log("hi");
+  }, []);
   const color = d3.scaleQuantize([1, 10], d3.schemeReds[9]);
   const format = (d) => `${d}%`;
   const path = d3.geoPath();
