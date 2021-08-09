@@ -13,12 +13,24 @@ import Layout from "../components/layout";
 import Paragraph from "../components/paragraph";
 import Subheader from "../components/subheader";
 import Map from "../components/map";
+import Papa from "papaparse";
 
 // Hooks
 import { getProducts } from "../hooks/products";
 
 const IndexPage = () => {
   const products = getProducts();
+
+  Papa.parse(
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdPUrQvsjESDBMBKhCOcY-TWtOq7rECmkuf01omBmQpkcBPF8ge_d6pcQ-ybGskS-K68xrJ3MCjqSH/pub?gid=0&single=true&output=csv",
+    {
+      download: true,
+      complete: function (results) {
+        console.log(results.data);
+      },
+    }
+  );
+
   return (
     <>
       <Helmet

@@ -6,7 +6,6 @@ import legend from "./legend";
 import { county } from "./county";
 import { states } from "./states";
 import us from "./us.json";
-import Papa from "papaparse";
 
 const Map = () => {
   React.useEffect(() => {
@@ -14,9 +13,11 @@ const Map = () => {
   }, []);
 
   const color = d3.scaleQuantize([1, 10], d3.schemeReds[9]);
+  console.log(d3.scaleQuantize([1, 10], d3.schemeReds[9]));
   const format = (d) => `${d}%`;
 
   const path = d3.geoPath();
+
   const ref = useD3((svg) => {
     svg
       .append("g")
@@ -42,16 +43,17 @@ const Map = () => {
       .attr("stroke-width", "0.2px")
       .attr("stroke-linejoin", "round")
       .attr("class", "state")
-      .attr(
-        "data-stuff",
-        (d) => `${d.properties.name}, ${states.get(d.id.slice(0, 2)).name}
-${format(county.get(d.id))}`
-      )
+      .attr("data-county", (d) => `${d.properties.name}`)
+      .attr("data-state", (d) => `${states.get(d.id.slice(0, 2)).name}`)
+      .attr("data-metric", (d) => `${format(county.get(d.id))}`)
       .append("title")
       .text(
         (d) => `${d.properties.name}, ${states.get(d.id.slice(0, 2)).name}
   ${format(county.get(d.id))}`
       );
+
+    (d) => `${d.properties.name}, ${states.get(d.id.slice(0, 2)).name}
+      ${format(county.get(d.id))}`;
 
     svg
       .append("path")
@@ -62,8 +64,16 @@ ${format(county.get(d.id))}`
       .attr("d", path);
   });
 
+  const grab = async (e) => {
+    //console.log(e.target.textContent);
+    console.log(e.target.dataset.state);
+    console.log(e.target.dataset.county);
+    console.log(e.target.dataset.metric);
+  };
+
   return (
     <svg
+      onClick={(e) => grab(e)}
       ref={ref}
       viewBox="0 0 960 700"
       preserveAspectRatio="xMidYMid meet"
